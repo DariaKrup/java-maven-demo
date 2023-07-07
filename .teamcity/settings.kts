@@ -37,6 +37,7 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_3"
             profileId = "amazon-1"
+            agentPoolId = "-2"
             name = "Ubuntu Image"
             vpcSubnetId = "subnet-0c23f411b0800b216"
             keyPairName = "daria.krupkina"
@@ -47,22 +48,20 @@ project {
         amazonEC2CloudProfile {
             id = "amazon-1"
             name = "Cloud Profile"
-            terminateIdleMinutes = 0
+            terminateIdleMinutes = 30
             region = AmazonEC2CloudProfile.Regions.EU_WEST_DUBLIN
             authType = accessKey {
                 keyId = "credentialsJSON:c4151395-a0a5-4db6-9697-918ebca829e5"
                 secretKey = "credentialsJSON:42f04976-3912-4b71-8161-3e9ca9484e7d"
             }
             param("terminate-after-build", "false")
-            param("terminateTimeOut_checkbox", "false")
+            param("terminateTimeOut_checkbox", "true")
         }
     }
 }
 
 object Build : BuildType({
     name = "Build"
-
-
 
     vcs {
         root(DslContext.settingsRoot)
