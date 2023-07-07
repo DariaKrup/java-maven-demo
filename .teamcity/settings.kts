@@ -64,7 +64,7 @@ object Build : BuildType({
     name = "Build"
     
     params {
-        param("parameter_for_dsl", "${DslContext.getParameter("serverUrl", "default")}")
+        param("parameter_for_dsl", "${DslContext.getParameter("serverUrl")}")
     }
 
     vcs {
