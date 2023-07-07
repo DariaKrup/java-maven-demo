@@ -33,6 +33,10 @@ project {
 
     buildType(Build)
 
+    params {
+        param("parameter_for_dsl_project", "")
+    }
+
     features {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_3"
