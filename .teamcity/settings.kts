@@ -34,7 +34,7 @@ project {
     buildType(Build)
 
     params {
-        param("parameter_for_dsl_project", "")
+        param("parameter_for_dsl_project", "${DslContext.getParameter("serverUrl", "default")}")
     }
 
     features {
@@ -67,7 +67,7 @@ object Build : BuildType({
     name = "Build"
 
     params {
-        param("parameter_for_dsl", "")
+        param("parameter_for_dsl", "${DslContext.getParameter("serverUrl", "default")}")
     }
 
     vcs {
