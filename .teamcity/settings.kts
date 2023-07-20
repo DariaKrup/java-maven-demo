@@ -81,4 +81,10 @@ object Build : BuildType({
         perfmon {
         }
     }
+
+    if (DslContext.serverUrl == "http://10.128.93.41:8151") {
+        params {
+            param("build_parameter", "serverUrlHere")
+        }
+    }
 })
