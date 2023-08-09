@@ -3,8 +3,8 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
-import lib.teamcity.vars.CategoryName
-import lib.teamcity.vars.ProjectName
+import lib.teamcity.CategoryName
+import lib.teamcity.ProjectName
 
 /*
 The settings script is an entry point for defining a TeamCity
