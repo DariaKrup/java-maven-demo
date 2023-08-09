@@ -61,7 +61,7 @@ project {
 
 object Build : BuildType({
     name = "Build"
-    val projectId = "${CategoryName}_${ProjectName}"
+    val projectId = "${CategoryName}_${ProjectName}_Build"
 
     vcs {
         root(DslContext.settingsRoot)
