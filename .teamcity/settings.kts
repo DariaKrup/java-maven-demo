@@ -1,9 +1,10 @@
+
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
-import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import lib.teamcity.vars.CategoryName
+import lib.teamcity.vars.ProjectName
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -60,6 +61,7 @@ project {
 
 object Build : BuildType({
     name = "Build"
+    val projectId = "${CategoryName}_${ProjectName}"
 
     vcs {
         root(DslContext.settingsRoot)
@@ -82,9 +84,9 @@ object Build : BuildType({
         }
     }
 
-    if (DslContext.serverUrl == "http://10.128.93.41:8151") {
+    /*if (DslContext.serverUrl == "http://10.128.93.41:8151") {
         params {
             param("build_parameter", "serverUrlHere")
         }
-    }
+    }*/
 })
