@@ -49,7 +49,7 @@ project {
         amazonEC2CloudProfile {
             id = "amazon-1"
             name = "Cloud Profile AWS"
-            terminateIdleMinutes = 0
+            terminateIdleMinutes = 60
             region = AmazonEC2CloudProfile.Regions.EU_WEST_DUBLIN
             authType = accessKey {
                 keyId = "credentialsJSON:11bf2913-176d-4cf4-aa84-f41d3135c0a1"
