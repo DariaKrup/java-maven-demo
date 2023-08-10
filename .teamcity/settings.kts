@@ -91,7 +91,7 @@ object Build : BuildType({
 object BookingApiPayconiq : Project({
     name = "BookingApiPayconiq"
 
-    val mainProjectName = "${ProjectName}_Build"
+    val mainProjectName = "${ProjectName}_Build_1"
     vcsRoot(BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
 
     template(BookingApiPayconiq_BuildConfig)
