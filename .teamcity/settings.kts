@@ -3,6 +3,7 @@ import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -99,6 +100,14 @@ object BookingApiPayconiq_BuildConfig : Template({
     name = "Build_Config"
 
     artifactRules = "**/*=>archive.zip"
+
+    steps {
+        script {
+            name = "Output"
+            id = "RUNNER_15"
+            scriptContent = "echo 'booking subproject'"
+        }
+    }
 })
 
 object BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster : GitVcsRoot({
