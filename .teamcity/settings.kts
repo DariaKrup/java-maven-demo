@@ -4,6 +4,7 @@ import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -56,6 +57,8 @@ project {
             }
         }
     }
+
+    subProject(BookingApiPayconiq)
 }
 
 object Build : BuildType({
@@ -80,5 +83,23 @@ object Build : BuildType({
     features {
         perfmon {
         }
+    }
+})
+
+
+object BookingApiPayconiq : Project({
+    name = "BookingApiPayconiq"
+
+    vcsRoot(BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
+})
+
+object BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster : GitVcsRoot({
+    name = "https://github.com/DariaKrup/BookingApiPayconiq#refs/heads/master"
+    url = "https://github.com/DariaKrup/BookingApiPayconiq"
+    branch = "refs/heads/master"
+    branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "DariaKrup"
+        password = "credentialsJSON:63794333-2fd2-47da-8fd5-83b767905c78"
     }
 })
