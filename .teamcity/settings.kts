@@ -97,6 +97,8 @@ object BookingApiPayconiq : Project({
 
 object BookingApiPayconiq_BuildConfig : Template({
     name = "Build_Config"
+
+    artifactRules = "**/*=>archive.zip"
 })
 
 object BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster : GitVcsRoot({
