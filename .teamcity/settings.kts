@@ -91,6 +91,12 @@ object BookingApiPayconiq : Project({
     name = "BookingApiPayconiq"
 
     vcsRoot(BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
+
+    template(BookingApiPayconiq_BuildConfig)
+})
+
+object BookingApiPayconiq_BuildConfig : Template({
+    name = "Build_Config"
 })
 
 object BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster : GitVcsRoot({
