@@ -3,9 +3,7 @@ import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
-import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
-import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -58,8 +56,6 @@ project {
             }
         }
     }
-
-    subProject(JavaMavenDemoChild)
 }
 
 object Build : BuildType({
@@ -84,54 +80,5 @@ object Build : BuildType({
     features {
         perfmon {
         }
-    }
-})
-
-
-object JavaMavenDemoChild : Project({
-    name = "Java Maven Demo (Child)"
-
-    vcsRoot(JavaMavenDemoChild_HttpsGithubComDariaKrupJavaMavenDemoRefsHeadsMaster)
-
-    buildType(JavaMavenDemoChild_Build)
-})
-
-object JavaMavenDemoChild_Build : BuildType({
-    name = "Build"
-
-    vcs {
-        root(JavaMavenDemoChild_HttpsGithubComDariaKrupJavaMavenDemoRefsHeadsMaster)
-    }
-
-    steps {
-        maven {
-            goals = "clean test"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
-        script {
-            name = "Output from child"
-            scriptContent = "echo 'Child subproject'"
-        }
-    }
-
-    triggers {
-        vcs {
-        }
-    }
-
-    features {
-        perfmon {
-        }
-    }
-})
-
-object JavaMavenDemoChild_HttpsGithubComDariaKrupJavaMavenDemoRefsHeadsMaster : GitVcsRoot({
-    name = "https://github.com/DariaKrup/java-maven-demo#refs/heads/master"
-    url = "https://github.com/DariaKrup/java-maven-demo"
-    branch = "refs/heads/master"
-    branchSpec = "refs/heads/*"
-    authMethod = password {
-        userName = "DariaKrup"
-        password = "credentialsJSON:63794333-2fd2-47da-8fd5-83b767905c78"
     }
 })
