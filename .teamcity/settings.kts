@@ -1,11 +1,11 @@
+
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
-import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
+import vars.teamcity.usage.ProjectName
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -91,6 +91,7 @@ object Build : BuildType({
 object BookingApiPayconiq : Project({
     name = "BookingApiPayconiq"
 
+    val mainProjectName = "${ProjectName}_Build"
     vcsRoot(BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
 
     template(BookingApiPayconiq_BuildConfig)
@@ -98,7 +99,6 @@ object BookingApiPayconiq : Project({
 
 object BookingApiPayconiq_BuildConfig : Template({
     name = "Build_Config"
-
     artifactRules = "**/*=>archive.zip"
 
     vcs {
