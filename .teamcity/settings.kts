@@ -101,6 +101,10 @@ object BookingApiPayconiq_BuildConfig : Template({
 
     artifactRules = "**/*=>archive.zip"
 
+    vcs {
+        root(BookingApiPayconiq_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
+    }
+
     steps {
         script {
             name = "Output"
