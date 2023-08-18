@@ -13,4 +13,12 @@ changeBuildType(RelativeId("Build")) {
         "Unexpected option value: artifactRules = $artifactRules"
     }
     artifactRules = "**/*=>target.1+3.zip"
+
+    dependencies {
+        add(AbsoluteId("BookingApiPayconiq_Build")) {
+            snapshot {
+            }
+        }
+
+    }
 }
