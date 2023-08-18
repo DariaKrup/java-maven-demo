@@ -1,4 +1,4 @@
-# java maven demo
+# Java Maven Demo
 Maven Demo Project
 
 ## 本地运行
