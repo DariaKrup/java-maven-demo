@@ -3,7 +3,7 @@ Simple Java Maven Demo Project to demonstrate some Maven options and possibiliti
 
 ## 本地运行
 
-确保本地环境安装了Java和Maven 
+确保本地环境安装了Java Maven 
 
 ```bash
 $ git clone https://github.com/goodrain/java-maven-demo.git
