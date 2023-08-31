@@ -1,4 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -25,4 +28,37 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2023.05"
 
 project {
+
+    vcsRoot(HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
+
+    buildType(Build)
 }
+
+object Build : BuildType({
+    name = "Build"
+
+    vcs {
+        root(HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+object HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster : GitVcsRoot({
+    name = "https://github.com/DariaKrup/BookingApiPayconiq#refs/heads/master"
+    url = "https://github.com/DariaKrup/BookingApiPayconiq"
+    branch = "refs/heads/master"
+    branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "DariaKrup"
+        password = "credentialsJSON:e5768ecb-889b-4836-a546-b07c01977d67"
+    }
+})
