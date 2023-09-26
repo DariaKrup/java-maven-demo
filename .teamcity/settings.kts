@@ -45,6 +45,21 @@ project {
             instanceType = "t2.medium"
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
             source = Source("ami-0817025aa39c203c6")
+            param("amazon-name", "simple-ubuntu-agent-with-pwsh")
+        }
+        amazonEC2CloudImage {
+            id = "PROJECT_EXT_9"
+            profileId = "amazon-8"
+            agentPoolId = "-2"
+            imagePriority = 2
+            name = "Ubuntu Image Lower Priority"
+            vpcSubnetId = "subnet-0c23f411b0800b216"
+            iamProfile = "dkrupkinaEc2Role"
+            keyPairName = "daria.krupkina"
+            instanceType = "t2.medium"
+            securityGroups = listOf("sg-072d8bfa0626ea2a6")
+            maxInstancesCount = 5
+            source = Source("ami-0817025aa39c203c6")
         }
         amazonEC2CloudProfile {
             id = "amazon-8"
