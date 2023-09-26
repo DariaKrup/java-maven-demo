@@ -60,6 +60,20 @@ project {
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
             maxInstancesCount = 5
             source = Source("ami-0817025aa39c203c6")
+            param("amazon-name", "simple-ubuntu-agent-with-pwsh")
+        }
+        amazonEC2CloudImage {
+            id = "PROJECT_EXT_12"
+            profileId = "amazon-8"
+            agentPoolId = "-2"
+            imagePriority = 5
+            name = "Ubuntu Image (1)"
+            vpcSubnetId = "subnet-0c23f411b0800b216"
+            keyPairName = "daria.krupkina"
+            instanceType = "t2.medium"
+            securityGroups = listOf("sg-072d8bfa0626ea2a6")
+            maxInstancesCount = 3
+            source = Source("ami-0817025aa39c203c6")
         }
         amazonEC2CloudProfile {
             id = "amazon-8"
