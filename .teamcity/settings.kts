@@ -79,12 +79,11 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_14"
             profileId = "amazon-8"
-            agentPoolId = "-2"
             imagePriority = 9
             name = "Ubuntu Image Highest"
             vpcSubnetId = "subnet-0c23f411b0800b216"
             keyPairName = "daria.krupkina"
-            instanceType = "t2.medium"
+            instanceType = "c4.large"
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
             maxInstancesCount = 2
             source = Source("ami-0817025aa39c203c6")
