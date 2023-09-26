@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
@@ -34,19 +33,6 @@ project {
     buildType(Build)
 
     features {
-        amazonEC2CloudImage {
-            id = "PROJECT_EXT_4"
-            profileId = "amazon-8"
-            agentPoolId = "-2"
-            imagePriority = 5
-            name = "Ubuntu Image"
-            vpcSubnetId = "subnet-0c23f411b0800b216"
-            keyPairName = "daria.krupkina"
-            instanceType = "t2.medium"
-            securityGroups = listOf("sg-072d8bfa0626ea2a6")
-            source = Source("ami-0817025aa39c203c6")
-            param("amazon-name", "simple-ubuntu-agent-with-pwsh")
-        }
         amazonEC2CloudProfile {
             id = "amazon-8"
             name = "Cloud AWS EC2 Profile"
