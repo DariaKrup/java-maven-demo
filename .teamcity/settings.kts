@@ -107,10 +107,22 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_16"
             profileId = "amazon-8"
-            agentPoolId = "-2"
             imagePriority = 10
             name = "C4 Image"
             vpcSubnetId = "subnet-0ace2a91ee63119ea"
+            keyPairName = "daria.krupkina"
+            instanceType = "c4.xlarge"
+            securityGroups = listOf("sg-072d8bfa0626ea2a6")
+            source = Source("ami-0817025aa39c203c6")
+            param("amazon-name", "simple-ubuntu-agent-with-pwsh")
+        }
+        amazonEC2CloudImage {
+            id = "PROJECT_EXT_17"
+            profileId = "amazon-8"
+            agentPoolId = "-2"
+            imagePriority = 10
+            name = "C4 Image Copy"
+            vpcSubnetId = "subnet-043178c302cabfe37"
             keyPairName = "daria.krupkina"
             instanceType = "c4.xlarge"
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
