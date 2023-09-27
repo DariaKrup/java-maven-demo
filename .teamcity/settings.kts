@@ -65,7 +65,7 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_12"
             profileId = "amazon-8"
-            agentPoolId = "-2"
+            agentPoolId = "21"
             imagePriority = 5
             name = "Ubuntu Image (1)"
             vpcSubnetId = "subnet-0c23f411b0800b216"
