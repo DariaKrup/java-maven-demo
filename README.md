@@ -1,5 +1,5 @@
 # Java Maven Demo
-Simple Java Maven Project to demonstrate some Maven options and possibilities.
+Simple Java Maven Project to demonstrate Maven options and possibilities.
 
 ## 本地运行
 
