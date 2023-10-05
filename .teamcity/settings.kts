@@ -33,6 +33,10 @@ project {
 
     buildType(Build)
 
+    params {
+        text("parameter_text_value", "value", allowEmpty = true)
+    }
+
     features {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_10"
