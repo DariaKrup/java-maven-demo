@@ -174,4 +174,10 @@ object Build : BuildType({
         perfmon {
         }
     }
+
+    dependencies {
+        snapshot(AbsoluteId("ParametersProject_Build")) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
