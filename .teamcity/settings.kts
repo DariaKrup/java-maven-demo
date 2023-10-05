@@ -35,6 +35,7 @@ project {
     buildType(Build)
 
     params {
+        param("reverse.dep.ParametersProject_Build.parameter_regex", "m0")
         text("parameter_text_value", "value", allowEmpty = true)
     }
 
