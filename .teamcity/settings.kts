@@ -37,6 +37,7 @@ project {
     params {
         param("reverse.dep.ParametersProject_Build.parameter_regex", "m0")
         text("parameter_text_value", "value", allowEmpty = true)
+        text("maven", "%teamcity.tool.maven%", readOnly = true, allowEmpty = true)
     }
 
     features {
