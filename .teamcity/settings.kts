@@ -44,7 +44,7 @@ object Build : BuildType({
     name = "Build"
 
     params {
-        text("password_maven", "maven_password", allowEmpty = true)
+        text("password_maven", "maven_pass", allowEmpty = true)
     }
 
     vcs {
