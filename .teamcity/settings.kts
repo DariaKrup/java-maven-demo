@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.projectFeatures.awsConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.projectFeatures.hashiCorpVaultParameter
 import jetbrains.buildServer.configs.kotlin.remoteParameters.hashiCorpVaultParameter
@@ -36,6 +37,16 @@ project {
     buildType(Build)
 
     features {
+        awsConnection {
+            id = "AmazonWebServicesAws"
+            name = "Amazon Web Services (AWS)"
+            regionName = "eu-west-1"
+            credentialsType = static {
+                accessKeyId = "AKIA5JH2VERVI62P5XDY"
+                secretAccessKey = "credentialsJSON:ec56aca9-5346-4c26-b964-49b3a9384fc9"
+                stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
+            }
+        }
         dockerRegistry {
             id = "PROJECT_EXT_10"
             name = "Docker Registry Local"
