@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.projectFeatures.hashiCorpVaultParameter
 import jetbrains.buildServer.configs.kotlin.remoteParameters.hashiCorpVaultParameter
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
@@ -35,6 +36,12 @@ project {
     buildType(Build)
 
     features {
+        dockerRegistry {
+            id = "PROJECT_EXT_10"
+            name = "Docker Registry Local"
+            userName = "dariakrup"
+            password = "credentialsJSON:f99d2d9f-043c-428d-a9a3-1f63102c0029"
+        }
         hashiCorpVaultParameter {
             id = "PROJECT_EXT_9"
             name = "HashiCorp Vault Local"
