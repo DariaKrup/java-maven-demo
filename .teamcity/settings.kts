@@ -56,6 +56,7 @@ project {
         hashiCorpVaultParameter {
             id = "PROJECT_EXT_11"
             name = "HashiCorp Vault IAM"
+            namespace = "default"
             vaultNamespace = "auth/aws"
             url = "https://vault.burnasheva.click:8200/"
             authMethod = iam()
