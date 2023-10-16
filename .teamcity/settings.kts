@@ -43,6 +43,12 @@ project {
             password = "credentialsJSON:f99d2d9f-043c-428d-a9a3-1f63102c0029"
         }
         hashiCorpVaultParameter {
+            id = "PROJECT_EXT_11"
+            name = "HashiCorp Vault IAM"
+            url = "https://vault.burnasheva.click:8200/"
+            authMethod = iam()
+        }
+        hashiCorpVaultParameter {
             id = "PROJECT_EXT_9"
             name = "HashiCorp Vault Local"
             url = "https://vault.burnasheva.click:8200/"
