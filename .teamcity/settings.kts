@@ -54,18 +54,6 @@ project {
             password = "credentialsJSON:f99d2d9f-043c-428d-a9a3-1f63102c0029"
         }
         hashiCorpVaultParameter {
-            id = "PROJECT_EXT_12"
-            name = "HashiCorp Vault LDAP"
-            namespace = "default"
-            vaultNamespace = "auth/ldap"
-            url = "https://vault.burnasheva.click:8200"
-            authMethod = ldap {
-                path = "ldap://127.0.0.1"
-                username = "admin"
-                password = "credentialsJSON:0beca8d5-392d-4914-ab20-6446b5903c2f"
-            }
-        }
-        hashiCorpVaultParameter {
             id = "PROJECT_EXT_9"
             name = "HashiCorp Vault Local"
             url = "https://vault.burnasheva.click:8200/"
