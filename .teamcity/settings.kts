@@ -68,7 +68,7 @@ project {
             vaultNamespace = "auth/ldap"
             url = "https://vault.burnasheva.click:8200"
             authMethod = ldap {
-                path = ""
+                path = "ldap://127.0.0.1"
                 username = "admin"
                 password = "credentialsJSON:0beca8d5-392d-4914-ab20-6446b5903c2f"
             }
