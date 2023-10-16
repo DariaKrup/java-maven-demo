@@ -62,6 +62,16 @@ project {
             authMethod = iam()
         }
         hashiCorpVaultParameter {
+            id = "PROJECT_EXT_12"
+            name = "HashiCorp Vault LDAP"
+            url = "https://vault.burnasheva.click:8200"
+            authMethod = ldap {
+                path = ""
+                username = "admin"
+                password = "credentialsJSON:0beca8d5-392d-4914-ab20-6446b5903c2f"
+            }
+        }
+        hashiCorpVaultParameter {
             id = "PROJECT_EXT_9"
             name = "HashiCorp Vault Local"
             url = "https://vault.burnasheva.click:8200/"
