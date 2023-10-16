@@ -64,6 +64,8 @@ project {
         hashiCorpVaultParameter {
             id = "PROJECT_EXT_12"
             name = "HashiCorp Vault LDAP"
+            namespace = "default"
+            vaultNamespace = "auth/ldap"
             url = "https://vault.burnasheva.click:8200"
             authMethod = ldap {
                 path = ""
