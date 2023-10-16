@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.projectFeatures.hashiCorpVaultParameter
 import jetbrains.buildServer.configs.kotlin.remoteParameters.hashiCorpVaultParameter
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
@@ -32,14 +33,26 @@ version = "2023.05"
 project {
 
     buildType(Build)
+
+    features {
+        hashiCorpVaultParameter {
+            id = "PROJECT_EXT_9"
+            name = "HashiCorp Vault Local"
+            url = "https://vault.burnasheva.click:8200/"
+            authMethod = appRole {
+                roleId = "23b3c7b7-40ef-086b-e5eb-276aaec9c43a"
+                secretId = "credentialsJSON:75fdee81-80da-47b1-8375-2c446fb27922"
+            }
+        }
+    }
 }
 
 object Build : BuildType({
     name = "Build"
 
     params {
-        text("text_parameter", "text_value", allowEmpty = true)
         password("password_parameter", "credentialsJSON:27a44fd6-e392-410a-b15d-f0488c67be9a")
+        text("text_parameter", "text_value", allowEmpty = true)
         hashiCorpVaultParameter {
             name = "github_token"
             query = "passwords_storage_v1/github!/token"
