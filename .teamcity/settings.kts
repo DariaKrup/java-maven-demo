@@ -82,6 +82,7 @@ object Build : BuildType({
         hashiCorpVaultParameter {
             name = "github_token"
             query = "passwords_storage_v1/github!/token"
+            param("teamcity_hashicorp_namespace", "teamcity-default-hashicorp-default-value")
         }
     }
 
