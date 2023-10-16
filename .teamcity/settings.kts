@@ -39,6 +39,7 @@ object Build : BuildType({
 
     params {
         text("text_parameter", "text_value", allowEmpty = true)
+        password("password_parameter", "credentialsJSON:27a44fd6-e392-410a-b15d-f0488c67be9a")
         hashiCorpVaultParameter {
             name = "github_token"
             query = "passwords_storage_v1/github!/token"
