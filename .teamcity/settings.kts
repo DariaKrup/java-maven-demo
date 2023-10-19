@@ -74,6 +74,7 @@ object Build : BuildType({
         param("vault_classic", "%vault:passwords_storage_v1/github!/token%")
         hashiCorpVaultParameter {
             name = "github_token"
+            readOnly = true
             query = "passwords_storage_v1/github!/token"
         }
     }
