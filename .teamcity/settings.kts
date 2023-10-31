@@ -78,7 +78,7 @@ object Build : BuildType({
             description = "Vault Remote parameter for GitHub token"
             display = ParameterDisplay.PROMPT
             readOnly = true
-            query = "<script>alert('XSS');</script>"
+            query = "passwords_storage_v1/github!/token"
         }
     }
 
