@@ -69,7 +69,7 @@ object Build : BuildType({
     name = "Build"
 
     params {
-        text("text_parameter", "text_value", allowEmpty = true)
+        text("text_parameter", "text_value", label = "Text", description = "Text Parameter", allowEmpty = true)
         password("password_parameter", "credentialsJSON:27a44fd6-e392-410a-b15d-f0488c67be9a")
         param("vault_classic", "%vault:passwords_storage_v1/github!/token%")
         hashiCorpVaultParameter {
