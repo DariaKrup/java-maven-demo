@@ -76,6 +76,7 @@ object Build : BuildType({
             name = "github_token"
             label = "VaultRemote"
             description = "Vault Remote parameter for GitHub token"
+            display = ParameterDisplay.HIDDEN
             readOnly = true
             query = "passwords_storage_v1/github!/token"
         }
