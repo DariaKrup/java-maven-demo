@@ -66,6 +66,14 @@ project {
             }
         }
         hashiCorpVaultConnection {
+            id = "PROJECT_EXT_6"
+            name = "HashiCorp Vault IAM"
+            namespace = "defaultNamespace"
+            vaultNamespace = "aws"
+            url = "https://vault.burnasheva.click:8200"
+            authMethod = iam()
+        }
+        hashiCorpVaultConnection {
             id = "PROJECT_EXT_9"
             name = "HashiCorp Vault Local"
             url = "https://vault.burnasheva.click:8200/"
