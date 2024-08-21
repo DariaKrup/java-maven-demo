@@ -22,7 +22,7 @@
     </repository>
     <repository>
       <id>teamcity-server</id>
-      <url>http://localhost:8111/app/dsl-plugins-repository</url>
+      <url>http://localhost:8311/app/dsl-plugins-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -99,6 +99,16 @@
       <artifactId>kotlin-script-runtime</artifactId>
       <version>${kotlin.version}</version>
       <scope>compile</scope>
+    </dependency>
+    <!--dependency>
+      <groupId>com.github.skydoves</groupId>
+      <artifactId>balloon-dsl</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency-->
+    <dependency>
+      <groupId>builds</groupId>
+      <artifactId>library</artifactId>
+      <version>1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
