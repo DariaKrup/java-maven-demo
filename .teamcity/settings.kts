@@ -5,6 +5,7 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import com.robomwm.samplejarprogram.Main
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -73,6 +74,7 @@ object Build : BuildType({
 
     params {
         password("password_parameter", "credentialsJSON:02ec2742-e9b5-44f2-85d5-18b63a2202b3")
+        text("text_parameter", Main.getConst())
     }
 
     vcs {
