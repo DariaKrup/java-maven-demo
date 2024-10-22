@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="AwsEc2Profile" uuid="5096a847-b8fb-4059-8f95-bbb3847f58b7" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Java Maven Demo: XML</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_40" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
+        <param name="rootId" value="AwsEc2Profile_JavaMavenDemoXml_HttpsGithubComDariaKrupJavaMavenDemoGitRefsHeadsMaster" />
+        <param name="settingsPath" value=".teamcity_aws_profile_xml" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+    <extension id="awsConnection_2" type="OAuthProvider">
+      <parameters>
+        <param name="awsAllowedInBuilds" value="false" />
+        <param name="awsAllowedInSubProjects" value="false" />
+        <param name="awsConnectionId" value="AmazonWebServicesAws_2" />
+        <param name="awsCredentialsType" value="awsAssumeIamRole" />
+        <param name="awsIamRoleArn" value="arn:aws:iam::913206223978:role/dkrupkinaEc2Role" />
+        <param name="awsIamRoleSessionName" value="TeamCity-session" />
+        <param name="awsRegionName" value="eu-west-1" />
+        <param name="awsSessionCredentials" value="true" />
+        <param name="awsSessionDuration" value="60" />
+        <param name="awsStsEndpoint" value="https://sts.eu-west-1.amazonaws.com" />
+        <param name="displayName" value="Amazon Web Services (AWS): IAM" />
+        <param name="providerType" value="AWS" />
+      </parameters>
+    </extension>
+    <extension id="awsConnection_3" type="OAuthProvider">
+      <parameters>
+        <param name="awsAccessKeyId" value="AKIA5JH2VERVI62P5XDY" />
+        <param name="awsAllowedInBuilds" value="true" />
+        <param name="awsAllowedInSubProjects" value="true" />
+        <param name="awsConnectionId" value="" />
+        <param name="awsCredentialsType" value="awsAccessKeys" />
+        <param name="awsIamRoleSessionName" value="TeamCity-session" />
+        <param name="awsRegionName" value="eu-west-1" />
+        <param name="awsSessionCredentials" value="true" />
+        <param name="awsSessionDuration" value="60" />
+        <param name="awsStsEndpoint" value="https://sts.eu-west-1.amazonaws.com" />
+        <param name="displayName" value="Amazon Web Services (AWS): keys" />
+        <param name="providerType" value="AWS" />
+        <param name="secure:awsSecretAccessKey" value="credentialsJSON:5956c87f-9f8f-4ec4-8c89-2874bed09e35" />
+      </parameters>
+    </extension>
+    <extension id="awsConnection_4" type="OAuthProvider">
+      <parameters>
+        <param name="awsAllowedInBuilds" value="false" />
+        <param name="awsAllowedInSubProjects" value="false" />
+        <param name="awsConnectionId" value="" />
+        <param name="awsCredentialsType" value="defaultProvider" />
+        <param name="awsIamRoleSessionName" value="TeamCity-session" />
+        <param name="awsRegionName" value="eu-west-1" />
+        <param name="awsSessionCredentials" value="true" />
+        <param name="awsSessionDuration" value="60" />
+        <param name="awsStsEndpoint" value="https://sts.eu-west-1.amazonaws.com" />
+        <param name="displayName" value="Amazon Web Services (AWS): Provider Chain" />
+        <param name="providerType" value="AWS" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
