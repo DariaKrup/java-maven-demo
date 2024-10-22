@@ -14,6 +14,21 @@
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_41" type="CloudImage">
+      <parameters>
+        <param name="amazon-id" value="ami-0817025aa39c203c6" />
+        <param name="iam-instance-profile" value="dkrupkinaEc2Role" />
+        <param name="image-name-prefix" value="Ubuntu AMI" />
+        <param name="image-priority" value="10" />
+        <param name="instance-type" value="t2.medium" />
+        <param name="key-pair-name" value="daria.krupkina" />
+        <param name="profileId" value="amazon-23" />
+        <param name="security-group-ids" value="sg-072d8bfa0626ea2a6" />
+        <param name="source-id" value="Ubuntu AMI" />
+        <param name="subnet-id" value="subnet-0ace2a91ee63119ea,subnet-043178c302cabfe37" />
+        <param name="user-tags" value="Owner=daria.krupkina@jetbrains.com" />
+      </parameters>
+    </extension>
     <extension id="amazon-23" type="CloudProfile">
       <parameters>
         <param name="awsConnectionId" value="awsConnection_2" />
