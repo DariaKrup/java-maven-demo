@@ -16,6 +16,7 @@
     </extension>
     <extension id="PROJECT_EXT_41" type="CloudImage">
       <parameters>
+        <param name="agent_pool_id" value="-2" />
         <param name="amazon-id" value="ami-0817025aa39c203c6" />
         <param name="iam-instance-profile" value="dkrupkinaEc2Role" />
         <param name="image-name-prefix" value="Ubuntu AMI" />
