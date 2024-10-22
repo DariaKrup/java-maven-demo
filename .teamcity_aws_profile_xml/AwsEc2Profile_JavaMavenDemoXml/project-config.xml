@@ -14,6 +14,22 @@
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
+    <extension id="amazon-23" type="CloudProfile">
+      <parameters>
+        <param name="awsConnectionId" value="awsConnection_2" />
+        <param name="cloud-code" value="amazon" />
+        <param name="description" value="Profile based on EC2 connection" />
+        <param name="enabled" value="true" />
+        <param name="max-running-instances" value="10" />
+        <param name="name" value="AWS EC2 Profile" />
+        <param name="profileId" value="amazon-23" />
+        <param name="profileServerUrl" value="http://10.128.93.57:8281/" />
+        <param name="region" value="eu-west-1" />
+        <param name="terminate-after-build" value="true" />
+        <param name="terminate-idle-time" value="" />
+        <param name="use-instance-iam-role" value="false" />
+      </parameters>
+    </extension>
     <extension id="awsConnection_2" type="OAuthProvider">
       <parameters>
         <param name="awsAllowedInBuilds" value="false" />
