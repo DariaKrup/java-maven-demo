@@ -136,7 +136,7 @@ project {
                                                     "Ebs": {}
                                                 }
                                             ],
-                                            "SubnetId": "subnet-0ace2a91ee63119ea",
+                                            "SubnetId": "subnet-043178c302cabfe37",
                                             "InstanceRequirements": {
                                                 "VCpuCount": {
                                                     "Min": 1,
