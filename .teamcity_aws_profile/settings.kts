@@ -98,7 +98,6 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_36"
             profileId = "amazon-22"
-            agentPoolId = "-2"
             imagePriority = 1
             name = "Spot Fleet request"
             source = SpotFleetConfig("""
@@ -137,7 +136,7 @@ project {
                                                     "Ebs": {}
                                                 }
                                             ],
-                                            "SubnetId": "subnet-0e8a4581403f50fbf",
+                                            "SubnetId": "subnet-0ace2a91ee63119ea",
                                             "InstanceRequirements": {
                                                 "VCpuCount": {
                                                     "Min": 1,
