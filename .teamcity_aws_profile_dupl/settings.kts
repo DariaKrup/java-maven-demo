@@ -36,14 +36,14 @@ project {
 
     features {
         kubernetesExecutor {
-            id = "PROJECT_EXT_118"
+            id = "K8S_EXECUTOR"
             connectionId = "PROJECT_EXT_2"
             profileName = "K8S"
             serverURL = "http://10.128.93.57:8281/"
             templateName = "aws-certficate-agent"
         }
         amazonEC2CloudProfile {
-            id = "amazon-30"
+            id = "amazon-21"
             name = "EC2"
             serverURL = "http://10.128.93.57:8281/"
             terminateIdleMinutes = 30
