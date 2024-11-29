@@ -36,15 +36,23 @@ project {
 
     features {
         awsConnection {
+            id = "AwsEc2Profile_JavaMavenDemo_AmazonWebServicesAwsDcpc"
+            name = "Amazon Web Services (AWS, DCPC)"
+            regionName = "eu-west-1"
+            credentialsType = default()
+            allowInBuilds = false
+            stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
+        }
+        awsConnection {
             id = "AwsEc2Profile_JavaMavenDemo_AmazonWebServicesAwsIam"
             name = "Amazon Web Services (AWS): IAM"
             regionName = "eu-west-1"
             credentialsType = iamRole {
                 roleArn = "arn:aws:iam::913206223978:role/dkrupkinaEc2Role"
                 awsConnectionId = "AmazonWebServicesAws_2"
-                stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
             }
             allowInBuilds = false
+            stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
         }
         awsConnection {
             id = "AwsEc2Profile_JavaMavenDemo_AmazonWebServicesAwsKeys"
@@ -53,10 +61,10 @@ project {
             credentialsType = static {
                 accessKeyId = "AKIA5JH2VERVI62P5XDY"
                 secretAccessKey = "credentialsJSON:5956c87f-9f8f-4ec4-8c89-2874bed09e35"
-                stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
             }
             allowInSubProjects = true
             allowInBuilds = true
+            stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
         }
         awsConnection {
             id = "AwsEc2Profile_JavaMavenDemo_AmazonWebServicesAwsProviderChain"
@@ -64,7 +72,7 @@ project {
             regionName = "eu-west-1"
             credentialsType = default()
             allowInBuilds = false
-            param("awsStsEndpoint", "https://sts.eu-west-1.amazonaws.com")
+            stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
         }
         amazonEC2CloudImage {
             id = "PROJECT_EXT_34"
