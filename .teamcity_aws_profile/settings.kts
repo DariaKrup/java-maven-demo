@@ -195,6 +195,7 @@ project {
         }
         amazonEC2CloudProfile {
             id = "amazon-21"
+            enabled = false
             name = "AWS EC2: Provider Chain"
             description = "AWS EC2 Cloud Profile with Provider chain authentication."
             terminateIdleMinutes = 0
