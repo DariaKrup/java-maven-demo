@@ -28,7 +28,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2024.07"
+version = "2025.03"
 
 project {
 
@@ -204,6 +204,7 @@ project {
         }
         amazonEC2CloudProfile {
             id = "amazon-22"
+            enabled = false
             name = "AWS EC2: keys"
             description = "AWS EC2 Cloud Profile with access keys authentication."
             terminateIdleMinutes = 0
